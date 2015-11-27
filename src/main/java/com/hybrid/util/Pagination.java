@@ -79,8 +79,6 @@ public class Pagination {
 		lastPage = firstPage + (pagesPerGroup - 1);
 		if (lastPage > totalPage)
 			lastPage = totalPage;
-		
-		
 	}
 	
 	public int getTotalItem() {

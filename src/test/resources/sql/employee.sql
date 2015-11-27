@@ -159,11 +159,7 @@ create table country (
 )
 
 
-
-
-
-
-
+select * from city
 
 
 

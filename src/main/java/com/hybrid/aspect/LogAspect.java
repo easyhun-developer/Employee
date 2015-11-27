@@ -11,7 +11,7 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 
 @Aspect
-public class LogDaoAspect {
+public class LogAspect {
 //	static Log log = LogFactory.getLog(LogDaoAspect.class);
 	
 	@Pointcut("execution(public * com.hybrid.dao.*Dao.*(..))")
