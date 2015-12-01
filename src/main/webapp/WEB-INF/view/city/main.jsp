@@ -9,8 +9,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <%@ include file="/WEB-INF/view/common.jspf" %>
-<title>template.jsp</title>
+<title>main.jsp</title>
+
+<!-- URL Resolve -->
+<c:url var="URL_GET_LIST" value="/city/"/>
+<c:url var="URL_GET_PAGE_BASE" value="/city/page/"/>
+<c:url var="URL_GET_ITEM_BASE" value="/city/"/>
 <script type="text/javascript">
+
+	var urls = {
+			GET_LIST : 			"${URL_GET_LIST}",
+			GET_PAGE_BASE : 	"${URL_GET_PAGE_BASE}",
+			GET_ITEM_BASE :		"${URL_GET_ITEM_BASE}"
+	};
+
 	var deps = ['ngRoute',
 	            'ngAnimate',
 	            'ngTouch',
@@ -19,13 +31,27 @@
 
 	var app = angular.module("employeeApp", deps);
 	
-	app.controller("mainController", function($scope, $http) {
+	app.constant("URL",urls);
+	
+	app.controller("mainController", function($scope, $http,$location) {
 		console.log("mainController...");
+		$location.path("/list");
 	});
 	
 </script>
+
+<c:url var="listController" value="/js/city/listController.js"></c:url>
+<c:url var="detailController" value="/js/city/detailController.js"></c:url>
+
+
+<script type="text/javascript" src="${listController}"></script>
+<script type="text/javascript" src="${detailController}"></script>
+
 </head>
 <body data-ng-controller="mainController" class="container">
+<h1>{{title}}</h1>
+<div data-ng-view>
 
+</div>
 </body>
 </html>

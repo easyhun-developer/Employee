@@ -23,17 +23,31 @@ import com.hybrid.util.Pagination;
 public class CityController {
 	static Log log = LogFactory.getLog(CityController.class);
 	
-	@Autowired
+	@Autowired	//필드 주입
 	CityListService CityListService;
 	
 	@Autowired
 	CityPageService CityPageService;
 	
-	@RequestMapping("/city.html")
+	@RequestMapping("/main.html")
 	public String getView() {
-		log.info("getView()...");
+		log.info("getMainView()...");
 		
-		return "city/city"; // /WEB-INF/view/city/city.jsp
+		return "city/main"; // /WEB-INF/view/city/main.jsp
+	}
+	
+	@RequestMapping("/list.html")
+	public String getListView() {
+		log.info("getListView()...");
+		
+		return "city/list"; // /WEB-INF/view/city/list.jsp
+	}
+	
+	@RequestMapping("/detail.html")
+	public String getDetailView() {
+		log.info("getDetailView()...");
+		
+		return "city/detail"; // /WEB-INF/view/city/detail.jsp
 	}
 	
 	@RequestMapping(value={"", "/"})

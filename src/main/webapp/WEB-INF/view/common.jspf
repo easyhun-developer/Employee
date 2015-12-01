@@ -4,10 +4,25 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>    
 
-<c:url var="bootstrap" value="/bootstrap/dist/css/bootstrap.css"/>
-<c:url var="jquery" value="/jquery/dist/jquery.js"/>
-<c:url var="angular" value="/angular/angular.js"/>
+<!-- CSS -->
+<c:url var="bootstrap" 					value="/bootstrap/dist/css/bootstrap.css"/>
+<c:url var="angular_loading_bar_css" 	value="/angular-loading-bar/build/loading-bar.css"/>
 
 <link rel="stylesheet" href="${bootstrap}"/>
+<link rel="stylesheet" href="${angular_loading_bar_css}"/>
+
+<!-- JavaScript -->
+<c:url var="jquery" 					value="/jquery/dist/jquery.js"/>
+<c:url var="angular" 					value="/angular/angular.js"/>
+<c:url var="angular_route" 				value="/angular-route/angular-route.js"/>
+<c:url var="angular_animate" 			value="/angular-animate/angular-animate.js"/>
+<c:url var="angular_touch" 				value="/angular-touch/angular-touch.js"/>
+<c:url var="angular_loading_bar" 		value="/angular-loading-bar/build/loading-bar.js"/>
+
+
 <script type="text/javascript" src="${jquery}"></script>
 <script type="text/javascript" src="${angular}"></script>
+<script type="text/javascript" src="${angular_route}"></script>
+<script type="text/javascript" src="${angular_animate}"></script>
+<script type="text/javascript" src="${angular_touch}"></script>
+<script type="text/javascript" src="${angular_loading_bar}"></script>
