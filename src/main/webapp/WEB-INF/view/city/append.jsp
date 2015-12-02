@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<title>detail.jsp</title>
+<title>append.jsp</title>
 </head>
 <body class="container">
 <a class="btn btn-primary" href="#/list">list...</a>

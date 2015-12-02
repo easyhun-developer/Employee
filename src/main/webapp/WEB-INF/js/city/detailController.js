@@ -15,5 +15,5 @@ app.controller('detailController', function($scope,$http,URL) {
 	console.log("detailController...");
 	console.log("URL.GET_ITEM_BASE = " + URL.GET_ITEM_BASE);
 	
-	$scope.$parent.title = "Detail View";
+	$scope.$parent.title = "Detail City View";
 });

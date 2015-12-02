@@ -18,9 +18,19 @@
 			</li>
 			<li><a href="" data-ng-click="nextClick(paging.lastPage+1)">Next</a></li>
 		</ul>
+		<a href="#/append" class="btn btn-primary">Append</a>
 		<table class="table table-striped table-hover">
 			<thead>
-				<th>No</th><th>ID</th><th>Name</th><th>CountryCode</th><th>District</th><th>Population</th>
+				<tr>
+					<th>No</th>
+					<th>ID</th>
+					<th>Name</th>
+					<th>CountryCode</th>
+					<th>District</th>
+					<th>Population</th>
+					<th>수정</th>
+					<th>삭제</th>
+				</tr>
 			</thead>
 			<tbody>
 				<tr data-ng-repeat="city in citys">
@@ -30,6 +40,8 @@
 					<td>{{city.countryCode}}</td>
 					<td>{{city.district}}</td>
 					<td>{{city.population}}</td>
+					<td><a href="#/modify" class="btn btn-success">Edit...</a></td>
+					<td><a href="#/delete" class="btn btn-info">delete...</a></td>
 				</tr>
 			</tbody>
 		</table>
