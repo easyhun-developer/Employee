@@ -1,7 +1,5 @@
 package com.hybrid.controller;
 
-import java.util.List;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +16,7 @@ import com.hybrid.model.CityList;
 import com.hybrid.model.CityPage;
 import com.hybrid.service.CityListService;
 import com.hybrid.service.CityPageService;
+import com.hybrid.service.CityRegisterService;
 
 @Controller
 @RequestMapping("/city")
@@ -29,6 +28,9 @@ public class CityController {
 	
 	@Autowired
 	CityPageService CityPageService;
+	
+	@Autowired
+	CityRegisterService CityRegisterService;
 	
 	/*
 	* main.html
@@ -139,9 +141,19 @@ public class CityController {
 	*/
 	@RequestMapping(value={"","/"}, method=RequestMethod.POST)
 	@ResponseBody
-	public CityCommand postCityAppend(@RequestBody CityCommand city){
-		log.info("postCityAppend()... city.id = "+city.getId());
-		return city;
+	public CityCommand postCityAppend(@RequestBody CityCommand command){
+		log.info("postCityAppend()... city.id = "+command.getId());
+		
+		command.validate();
+		
+		if(command.isValid()){
+			// throw
+		}
+		
+		int id = CityRegisterService.regist(command.getCity());
+		command.setId(id);
+		
+		return command;
 	}
 	
 	/*

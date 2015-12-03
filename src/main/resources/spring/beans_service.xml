@@ -6,13 +6,18 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
 <!-- CityListService -->
-<bean class="com.hybrid.service.CityListService">
+<bean id="CityListService" class="com.hybrid.service.CityListService">
 	<property name="cityDao" ref="cityDao"/>
 </bean>
 
 
 <!-- CityPageService -->
-<bean class="com.hybrid.service.CityPageService">
+<bean id="CityPageService" class="com.hybrid.service.CityPageService">
+	<property name="cityDao" ref="cityDao"/>
+</bean>
+
+<!-- CityRegisterService -->
+<bean id="CityRegisterService" class="com.hybrid.service.CityRegisterService">
 	<property name="cityDao" ref="cityDao"/>
 </bean>
     

@@ -1,16 +1,64 @@
 package com.hybrid.command;
 
-import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
-import com.hybrid.exception.PasswordNotMatchingException;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.hybrid.model.City;
 
+@JsonIgnoreProperties(value = "city")
 public class CityCommand {
 	private int id;
 	private String name;
 	private String countryCode;
 	private String district;
 	private Integer population;
+	
+	private Map<String, Object> errorMessage;
+	
+	public CityCommand(){
+		errorMessage = new HashMap<>();
+	}
+	
+	public Map<String, Object> getErrorMessage(){
+		return errorMessage;
+	}
+	
+	public void validate() {
+		/*
+		* name validation
+		*/
 		
+		/*
+		* countryCode validation
+		*/
+		
+		/*
+		* district validation
+		*/
+		
+		/*
+		* population validation
+		*/
+	}
+	
+	public boolean isValid(){
+		if(errorMessage.size() > 0)
+			return false;
+		
+		return true;
+	}
+	
+	public City getCity() {
+		City c = new City();
+//		c.setId(id);
+		c.setName(name);
+		c.setCountryCode(countryCode);
+		c.setDistrict(district);
+		c.setPopulation(population);
+		
+		return c;
+	}
 	public int getId() {
 		return id;
 	}

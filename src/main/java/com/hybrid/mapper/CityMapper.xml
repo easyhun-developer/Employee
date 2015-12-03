@@ -22,7 +22,7 @@
 			   district,
 			   population
 		  from city
-		 order by countrycode asc, name asc 
+		 order by id desc 
 		 limit #{start}, #{length} 
     </select>
     <select id="selectPage" 
@@ -33,7 +33,7 @@
 		  from ( select rownum r, inner.*
 		  		   from ( select *
 		  		   			from city 
-		  		   		   order by countrycode asc, name asc
+		  		   		   order by id desc
 		  		        ) inner
 		  	   ) outer
 		 where outer.r &gt;= #{firstItem}
@@ -50,10 +50,36 @@
 		  from city
 		 where countrycode = #{countryCode}
     </select>
-    <insert id="insert" parameterType="com.hybrid.model.City">
+    <insert id="insert"
+        	parameterType="com.hybrid.model.City"
+        	useGeneratedKeys="true"
+        	keyProperty="id"
+        	databaseId="mysql">
         insert into city
 		(
-			id, 
+			name, 
+			countrycode, 
+			district, 
+			population
+		)
+		values
+		(
+			#{name, jdbcType=VARCHAR},
+			#{countryCode, jdbcType=VARCHAR},
+			#{district, jdbcType=VARCHAR},
+			#{population, jdbcType=NUMERIC}
+		)
+    </insert>
+    
+    <insert id="insert"
+        	parameterType="com.hybrid.model.City"
+        	databaseId="oracle">
+        <selectKey keyProperty="id" resultType="int" order="BEFORE">
+            select city_id_generator.nextVal from dual
+        </selectKey>
+        insert into city
+		(
+			id,
 			name, 
 			countrycode, 
 			district, 
@@ -62,17 +88,15 @@
 		values
 		(
 			#{id},
-			#{name},
-			#{countryCode},
-			#{district},
-			#{population}
+			#{name, jdbcType=VARCHAR},
+			#{countryCode, jdbcType=VARCHAR},
+			#{district, jdbcType=VARCHAR},
+			#{population, jdbcType=NUMERIC}
 		)
     </insert>
+    
     <delete id="deleteAll">
         delete from city
     </delete>
-    
-    
-    
     
 </mapper>

@@ -29,7 +29,8 @@ public class CityDao {
 	}
 	
 	public int insert(City city){
-		return cityMapper.insert(city);
+		int rtn = cityMapper.insert(city);
+		return city.getId();
 	}
 	public int deleteAll(){
 		return cityMapper.deleteAll();
