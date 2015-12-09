@@ -71,11 +71,11 @@
 	
 </script>
 
-<c:url var="listController" value="/js/city/listController.js"></c:url>
-<c:url var="detailController" value="/js/city/detailController.js"></c:url>
-<c:url var="appendController" value="/js/city/appendController.js"></c:url>
-<c:url var="modifyController" value="/js/city/modifyController.js"></c:url>
-<c:url var="deleteController" value="/js/city/deleteController.js"></c:url>
+<c:url var="listController" value="/js/country/listController.js"></c:url>
+<c:url var="detailController" value="/js/country/detailController.js"></c:url>
+<c:url var="appendController" value="/js/country/appendController.js"></c:url>
+<c:url var="modifyController" value="/js/country/modifyController.js"></c:url>
+<c:url var="deleteController" value="/js/country/deleteController.js"></c:url>
 
 <script type="text/javascript" src="${listController}"></script>
 <script type="text/javascript" src="${detailController}"></script>
@@ -87,7 +87,7 @@
 <body data-ng-controller="mainController" class="container">
 
 
-<h1>{{title}}</h1>
+<h1 style="background-color: red"># Country {{title}}</h1>
 <div data-ng-view>
 
 </div>

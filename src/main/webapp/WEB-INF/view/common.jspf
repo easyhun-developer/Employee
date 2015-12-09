@@ -13,6 +13,7 @@
 
 <!-- JavaScript -->
 <c:url var="jquery" 					value="/jquery/dist/jquery.js"/>
+<c:url var="bootstrap_js" 				value="/bootstrap/dist/js/bootstrap.js"/>
 <c:url var="angular" 					value="/angular/angular.js"/>
 <c:url var="angular_route" 				value="/angular-route/angular-route.js"/>
 <c:url var="angular_animate" 			value="/angular-animate/angular-animate.js"/>
@@ -21,6 +22,7 @@
 
 
 <script type="text/javascript" src="${jquery}"></script>
+<script type="text/javascript" src="${bootstrap_js}"></script>
 <script type="text/javascript" src="${angular}"></script>
 <script type="text/javascript" src="${angular_route}"></script>
 <script type="text/javascript" src="${angular_animate}"></script>
