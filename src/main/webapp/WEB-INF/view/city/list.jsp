@@ -18,9 +18,20 @@
 			</li>
 			<li><a href="" data-ng-click="nextClick(paging.lastPage+1)">Next</a></li>
 		</ul>
-		<a href="#/append" class="btn btn-primary">Append</a>
+		
 		<table class="table table-striped table-hover">
-			<thead>
+		<thead>
+		<tr><td><a href="#/append" class="btn btn-primary">Append</a></td></tr>
+		<tr><th colspan="8">
+				<div data-uib-pagination 
+					 data-total-items="paging.totalItem" style="800px;"
+					 data-ng-model="pageNo"
+					 data-max-size="10"
+					 data-ng-change="selectPage()"
+					 data-boundary-links="true">
+				</div>
+				</th>
+				</tr>
 				<tr>
 					<th>No</th>
 					<th>ID</th>
@@ -35,13 +46,13 @@
 			<tbody>
 				<tr data-ng-repeat="city in citys">
 					<td>{{$index + 1}}</td>
-					<td><a href="#/detail">{{city.id}}</a></td>
+					<td><a href="#/detail/{{city.id}}">{{city.id}}</a></td>
 					<td>{{city.name}}</td>
 					<td>{{city.countryCode}}</td>
 					<td>{{city.district}}</td>
 					<td>{{city.population}}</td>
-					<td><a href="#/modify" class="btn btn-success">Edit...</a></td>
-					<td><a href="#/delete" class="btn btn-info">delete...</a></td>
+					<td><a href="#/modify/{{city.id}}" class="btn btn-success">Edit...</a></td>
+					<td><a href="#/delete/{{city.id}}" class="btn btn-info">delete...</a></td>
 				</tr>
 			</tbody>
 		</table>

@@ -40,6 +40,15 @@
 		   and outer.r &lt;= #{lastItem}
     </select>
     
+    <select id="selectById" resultType="com.hybrid.model.City">
+        select id,
+			   name,
+			   countrycode,
+			   district,
+			   population
+		  from city
+		  where id = #{id}
+    </select>
     
     <select id="selectByCountryCode" parameterType="string" resultType="com.hybrid.model.City">
         select id,
@@ -94,6 +103,19 @@
 			#{population, jdbcType=NUMERIC}
 		)
     </insert>
+    
+    <update id="update" parameterType="com.hybrid.model.City">
+        update city
+        	set name 			= #{name},
+        		countryCode		= #{countryCode},
+        		district		= #{district},
+        		population		= #{population}
+        	where id = #{id}
+    </update>    
+    
+    <delete id="deleteById" parameterType="int">
+        delete from city where id = #{id}
+    </delete>
     
     <delete id="deleteAll">
         delete from city

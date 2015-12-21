@@ -9,12 +9,31 @@
         	   register_date
           from member
     </select>
+    
+    <select id="selectByEmailAndPassword"
+        	parameterType="hashmap"
+        	resultType="com.hybrid.model.Member">
+        select id,
+        	   email,
+        	   name,
+        	   password,
+        	   register_date
+          from member
+         where email = #{email}
+         	and password = #{password}
+    </select>
+    
+<!-- 회원가입 -->
     <insert id="insert">
         
     </insert>
+    
+<!-- 회원수정 -->
     <update id="update">
         
     </update>
+    
+<!-- 회원탈퇴 -->
     <delete id="delete">
         
     </delete>

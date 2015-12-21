@@ -19,6 +19,9 @@
 <c:url var="angular_animate" 			value="/angular-animate/angular-animate.js"/>
 <c:url var="angular_touch" 				value="/angular-touch/angular-touch.js"/>
 <c:url var="angular_loading_bar" 		value="/angular-loading-bar/build/loading-bar.js"/>
+<c:url var="angular_ui_bootstrap" 		value="/angular-ui-bootstrap/ui-bootstrap.js"/>
+<c:url var="angular_ui_bootstrap_tpls" 		value="/angular-ui-bootstrap/ui-bootstrap-tpls.js"/>
+<c:url var="ngmap" 		value="/ngmap/build/scripts/ng-map.js"/>
 
 
 <script type="text/javascript" src="${jquery}"></script>
@@ -28,3 +31,7 @@
 <script type="text/javascript" src="${angular_animate}"></script>
 <script type="text/javascript" src="${angular_touch}"></script>
 <script type="text/javascript" src="${angular_loading_bar}"></script>
+<script type="text/javascript" src="${angular_ui_bootstrap}"></script>
+<script type="text/javascript" src="${angular_ui_bootstrap_tpls}"></script>
+<script type="text/javascript" src="${ngmap}"></script>
+

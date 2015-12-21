@@ -5,6 +5,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
+<!-- LoginService -->
+<bean id="loginService" class="com.hybrid.service.LoginService">
+	<property name="memberDao" ref="memberDao"/>
+</bean>
+
 <!-- CityListService -->
 <bean id="CityListService" class="com.hybrid.service.CityListService">
 	<property name="cityDao" ref="cityDao"/>
@@ -20,5 +25,20 @@
 <bean id="CityRegisterService" class="com.hybrid.service.CityRegisterService">
 	<property name="cityDao" ref="cityDao"/>
 </bean>
-    
+
+<!-- CityDetailService -->
+<bean id="CityDetailService" class="com.hybrid.service.CityDetailService">
+	<property name="cityDao" ref="cityDao"/>
+</bean>
+
+<!-- CityModifyService -->
+<bean id="CityModifyService" class="com.hybrid.service.CityModifyService">
+	<property name="cityDao" ref="cityDao"/>
+</bean>
+
+<!-- CityUnRegisterService -->
+<bean id="CityUnRegisterService" class="com.hybrid.service.CityUnRegisterService">
+	<property name="cityDao" ref="cityDao"/>
+</bean>
+
 </beans>
