@@ -12,17 +12,17 @@
 <title>main.jsp</title>
 
 <!-- URL Resolve -->
-<c:url var="URL_GET_LIST" 					value="/city/"/>
-<c:url var="URL_GET_ITEM_BASE" 				value="/city/"/>	<!-- /city/{id} -->
-<c:url var="URL_GET_PAGE_BASE" 				value="/city/page/"/>	<!-- /city/page/{pageNo} -->
+<c:url var="URL_GET_LIST" 					value="/member/"/>
+<c:url var="URL_GET_ITEM_BASE" 				value="/member/"/>	<!-- /member/{id} -->
+<c:url var="URL_GET_PAGE_BASE" 				value="/member/page/"/>	<!-- /member/page/{pageNo} -->
 
-<c:url var="URL_POST_LIST_APPEND" 			value="/city/"/>
-<c:url var="URL_POST_ITEM_APPEND" 			value="/city/"/>
+<c:url var="URL_POST_LIST_APPEND" 			value="/member/"/>
+<c:url var="URL_POST_ITEM_APPEND" 			value="/member/"/>
 
-<c:url var="URL_PUT_LIST_MODIFY" 			value="/city/"/>
-<c:url var="URL_PUT_ITEM_MODIFY_BASE" 		value="/city/"/>	<!-- /city/{id} -->
+<c:url var="URL_PUT_LIST_MODIFY" 			value="/member/"/>
+<c:url var="URL_PUT_ITEM_MODIFY_BASE" 		value="/member/"/>	<!-- /member/{id} -->
 
-<c:url var="URL_DELETE_ITEM_DELETE_BASE" 	value="/city/"/>	<!-- /city/{id} -->
+<c:url var="URL_DELETE_ITEM_DELETE_BASE" 	value="/member/"/>	<!-- /member/{id} -->
 
 
 

@@ -7,7 +7,11 @@
 <!-- CSS -->
 <c:url var="bootstrap" 					value="/bootstrap/dist/css/bootstrap.css"/>
 <c:url var="angular_loading_bar_css" 	value="/angular-loading-bar/build/loading-bar.css"/>
+<c:url var="font_awesome" 				value="/font-awesome/css/font-awesome.css"/>
+<c:url var="metismenu" 					value="/metismenu/dist/metisMenu.css"/>
 
+<link rel="stylesheet" href="${font_awesome}"/>
+<link rel="stylesheet" href="${metismenu}"/>
 <link rel="stylesheet" href="${bootstrap}"/>
 <link rel="stylesheet" href="${angular_loading_bar_css}"/>
 
@@ -15,6 +19,7 @@
 <c:url var="jquery" 					value="/jquery/dist/jquery.js"/>
 <c:url var="bootstrap_js" 				value="/bootstrap/dist/js/bootstrap.js"/>
 <c:url var="angular" 					value="/angular/angular.js"/>
+<c:url var="metismenu_js" 				value="/metismenu/dist/metisMenu.js"/>
 <c:url var="angular_route" 				value="/angular-route/angular-route.js"/>
 <c:url var="angular_animate" 			value="/angular-animate/angular-animate.js"/>
 <c:url var="angular_touch" 				value="/angular-touch/angular-touch.js"/>
@@ -26,6 +31,7 @@
 
 <script type="text/javascript" src="${jquery}"></script>
 <script type="text/javascript" src="${bootstrap_js}"></script>
+<script type="text/javascript" src="${metismenu_js}"></script>
 <script type="text/javascript" src="${angular}"></script>
 <script type="text/javascript" src="${angular_route}"></script>
 <script type="text/javascript" src="${angular_animate}"></script>
